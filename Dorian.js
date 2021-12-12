@@ -61,8 +61,18 @@ textNodes.push(weightLossText[i]);
   }
 });
 
-document.getElementsByClassName("social_footer_ul")[0].addEventListener("mouseenter",function(event){
+let icons = document.getElementsByClassName("social_footer_ul")[0];
+let borderColor = ["red", "#4267B2", "#E1306C", "#2867B2", "yellow"];
+for(let i = 0; i<5;i++){
+  icons.children[i].addEventListener("mouseover",()=>{
+    icons.children[i].children[0].style.borderColor = borderColor[i];
+  })
+  icons.children[i].addEventListener("mouseout",()=>{
+    icons.children[i].children[0].style.borderColor = "#CCC";
 
-let fb = document.getElementsByClassName("social_footer_ul")[0];//how to access children of a class
-event.target.style.borderColor = "blue";
-});
+  })
+}
+
+function goToFooter(){
+  window.scrollTo(0, document.body.scrollHeight);
+}
