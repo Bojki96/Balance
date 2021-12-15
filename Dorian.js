@@ -51,7 +51,8 @@ document.addEventListener("scroll", () => {
   }
   if (
     window.scrollY >
-    overviewNodes[0].offsetTop + overviewNodes[0].offsetHeight
+    overviewNodes[0].offsetTop
+    // + overviewNodes[0].offsetHeight
   ) {
     overviewNodes[0].classList.add("animate-height");
     textNodes[0].classList.add("animate-text-opacity");
@@ -71,7 +72,8 @@ document.addEventListener("scroll", () => {
   }
   if (
     window.scrollY >
-    overviewNodes[1].offsetTop + overviewNodes[1].offsetHeight
+    overviewNodes[1].offsetTop 
+    //+ overviewNodes[1].offsetHeight
   ) {
     overviewNodes[1].classList.add("animate-height");
     textNodes[1].classList.add("animate-text-opacity");
@@ -83,7 +85,8 @@ document.addEventListener("scroll", () => {
   }
   if (
     window.scrollY >
-    overviewNodes[2].offsetTop + overviewNodes[2].offsetHeight
+    overviewNodes[2].offsetTop 
+    //+ overviewNodes[2].offsetHeight
   ) {
     overviewNodes[2].classList.add("animate-height");
     textNodes[2].classList.add("animate-text-opacity");
@@ -95,7 +98,8 @@ document.addEventListener("scroll", () => {
   }
   if (
     window.scrollY >
-    overviewNodes[3].offsetTop + overviewNodes[3].offsetHeight
+    overviewNodes[3].offsetTop
+    //+ overviewNodes[3].offsetHeight
   ) {
     overviewNodes[3].classList.add("animate-height");
     textNodes[3].classList.add("animate-text-opacity");
