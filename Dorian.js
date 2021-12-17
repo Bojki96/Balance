@@ -108,6 +108,20 @@ document.addEventListener("scroll", () => {
       iterations: 1,
       fill: "forwards",
     });
+
+    let fitApps = document.getElementsByClassName("fit-apps");
+    let delayAnimation = 1500;
+    for(let i = 0; i < fitApps.length; i++){
+
+      fitApps[i].animate([{opacity: 1}], {
+        duration: 1500,
+        delay: delayAnimation,
+        iterations: 1,
+        fill: "forwards",
+      });
+      delayAnimation += 500;
+    }
+   
   }
 });
 
@@ -124,4 +138,11 @@ for (let i = 0; i < 5; i++) {
 
 function goToFooter() {
   window.scrollTo(0, document.body.scrollHeight);
+  let footerColor = document.getElementsByClassName("social_footer_ul")[0];
+  footerColor.animate([{border: "#ff0000 solid 2px"}], {
+      duration: 1000,
+      iterations:2,
+      fill: "backwards",
+      
+    })
 }
