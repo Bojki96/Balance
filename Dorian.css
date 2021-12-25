@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   color: red;
   background: black;
 }
@@ -263,25 +264,25 @@ h2 {
 }
 
 .content {
-  display:flex;
-flex-wrap: wrap;
-justify-content: center;
-width: 100%;
-margin-bottom: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10%;
 }
 
-.first-row{
+.first-row {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  width:100%;
+  width: 100%;
   gap: 5%;
 }
 
 .about {
   /* box-shadow: 0 1.5px rgb(146 161 176/30%); */
   padding: 0 5% 50px 5%;
-  
+
   /* margin-bottom: 20px; */
 }
 
@@ -305,19 +306,19 @@ margin-bottom: 10%;
   max-width: 550px;
   border-top: transparent solid 3px;
   /* margin: 0 10px 0 10px; */
-  
+
   /* transition: height 1s ease-in-out; */
 }
 
 /* .weight-loss {
   /* background-color:rgb(224, 1, 1); */
 
-  /* background-image: linear-gradient(180deg, rgb(255, 0, 0), transparent 70%); */
-  /* box-shadow: 0 1.5px rgb(146 161 176/30%); */
+/* background-image: linear-gradient(180deg, rgb(255, 0, 0), transparent 70%); */
+/* box-shadow: 0 1.5px rgb(146 161 176/30%); */
 
-  /* border: red solid 2px; */
-  
-  /* border-right: red solid 3px;
+/* border: red solid 2px; */
+
+/* border-right: red solid 3px;
   border-left: red solid 3px; */
 /* width: 0px; */
 
@@ -393,7 +394,7 @@ margin-bottom: 10%;
   border-left: rgb(29, 106, 207) solid 3px; */
   position: relative;
   /* top: -11.8rem; */
-  max-width:100%;
+  max-width: 100%;
 }
 
 #apps-title {
@@ -416,12 +417,12 @@ margin-bottom: 10%;
 @keyframes heightAnimation {
   from {
     max-height: 0;
-    
+
   }
 
   to {
     max-height: 100rem;
-    
+
   }
 }
 
@@ -452,7 +453,7 @@ margin-bottom: 10%;
   to {background-position: 100rem; opacity: 1;}
 } */
 
-.apps-container{
+.apps-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -461,7 +462,7 @@ margin-bottom: 10%;
   /* border: #ff0000 solid 3px; */
 }
 
-.apps-container *{
+.apps-container * {
   max-width: 400px;
   margin: 5px 10px 5px 10px;
   background-color: white;
@@ -469,221 +470,120 @@ margin-bottom: 10%;
   border-radius: 10px;
 }
 
-.fit-apps{
+.fit-apps {
   opacity: 0;
 }
 
 .bottom_border {
   border-bottom: 1px solid #ff0000;
-  
+
   margin: 0 5% 30px 5%;
 }
 
-
-/* Global */
-
-*:focus {
-    outline: none;
-} 
-
-* {
-  box-sizing: border-box;
-}
-
-#form-footer a {
-  color: #92badd;
-  display:inline-block;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-/* h2 {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  display:inline-block;
-  margin: 40px 8px 10px 8px; 
-  color: #cccccc;
-} */
-
-
-
-/* STRUCTURE */
-
-.form-container {
-  display: none;
-  align-items: center;
-  flex-direction: column; 
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  padding: 20px;
-}
-
-#formContent {
-  border-radius: 3px;
-  border: 3px solid skyblu;
-  background: #464647;
-  padding: 0;
-  width: 90%;
-  max-width: 350px;
-  position: relative;
-  box-shadow: 0 0 10px #464647;
+.subscribers {
+  max-height: 500px;
+  background-color: rgba(255, 0, 0, 0.8);
+  width: 320px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -80px;
+  padding: 10px 8px 20px 8px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  border: red solid 2px;
   text-align: center;
 }
 
-#formFooter {
-  background: transparent;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  border-radius: 0 0 10px 10px;
+.choose {
+  border-bottom: rgb(148, 1, 1) solid 2px;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-h2#inactive {
-  color: #cccccc;
+.choose p:hover {
   cursor: pointer;
 }
 
-h2#active {
-  color: #fff;
-  border-bottom: 2px solid #5fbae9;
+.choose p:first-child {
+  border-bottom: red solid 3px;
+  margin-bottom: -1.5px;
+  padding-right: 10px;
+  font-size: 25px;
 }
 
-/* FORM STYLING */
-
-input[type=button], input[type=submit], input[type="reset"]  {
-  background: transparent;
-  border: none;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 13px;
-  box-shadow: 0 0 1px skyblue;
-  border-radius: 50px;
-  margin: 5px 20px 40px 20px;
-  transition: all 0.3s ease-in-out;
-}
-
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  box-shadow: 0 0 10px 0 skyblue;
-  cursor: pointer;
-  color: #fff;
-}
-
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-  transform: scale(0.95);
-}
-
-input[type=text], input[type="password"] {
-  background: transparent;
-  color: transparent;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
+input {
+  margin: 10px 0 0 0;
+  border: rgb(148, 1, 1) solid 2px;
+  border-radius: 10px;
+  height: 30px;
   width: 85%;
-  border: none;
-  box-shadow: 0 0 1px skyblue;
-  transition: all 0.5s ease-in-out;
-  border-radius: 20px;
+  font-size: 15px;
+  background-color: none;
+  padding-left: 5px;
 }
 
-input[type=text]:focus, input[type="password"]:focus {
-  box-shadow: 0 0 10px skyblue;
-  color: #fff;
+#subscribe {
+  background-color: red;
+  font-size: 20px;
+  width: 120px;
+  display: none;
+  margin: 15px auto auto auto;
 }
 
-
-       /* ANIMATIONS */
-
-/* Fade-in-down Animation */
-
-.fadeInDown {  
-  animation-name: fadeInDown;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+#subscribe:hover {
+  background-color: rgb(212, 0, 0);
+  cursor: pointer;
 }
 
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -100%, 0);
-  }
- 
- 50%{
-  opacity: .5;
-  transform: translate3d(0, 20%, 0);
- }
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-/* Fade-in Animation */
-
-@keyframes fadeIn {
- from { 
-  opacity:0; 
- } 
-
- to {
-  opacity:1; 
-  } 
-}
-
-.fadeIn {
-  opacity:0;
-  animation: fadeIn ease-in 1s;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-}
-
-.fadeIn.first {
-  animation-delay: 0.4s;
-}
-
-.fadeIn.second {
-  animation-delay: 0.6s;
-}
-
-.fadeIn.third {
-  animation-delay: 0.8s;
-}
-
-.fadeIn.fourth {
-  animation-delay: 1s;
-}
-
-/* Fade-in Animation */
-
-.underlineHover:after {
+#package {
+  background-color: red;
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
   display: block;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: #56baed;
-  content: "";
-  transition: width 0.2s;
+  cursor: pointer;
+  border-radius: 10px;
+  border: rgb(148, 1, 1) solid 2px;
+  margin: 15px auto auto auto;
 }
 
-.underlineHover:hover {
-  color: #fff;
+#package:hover {
+  background-color: rgb(212, 0, 0);
 }
 
-.underlineHover:hover:after{
-  width: 100%;
+#packages {
+  margin: 15px auto auto 15px;
 }
 
+#packages li {
+  margin: 5px auto 5px auto;
+  display: none;
+  border: rgb(148, 1, 1) solid 1px;
+  border-radius: 10px;
+  text-align: left;
+  padding-left: 5px;
+  background: linear-gradient(to right, white 50%, red 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  opacity: 0;
+  transition: background-position 2s ease;
+}
 
+#packages li a {
+  text-decoration: none;
+  color: black;
+}
+
+#packages li:hover {
+  cursor: pointer;
+  background-position: left;
+}
 
 .foote_bottom_ul_amrc {
   list-style-type: none;
@@ -712,7 +612,7 @@ input[type=text]:focus, input[type="password"]:focus {
   border: transparent solid 2px;
   border-radius: 20px;
   height: 50px;
- 
+
 }
 
 .social_footer_ul li {
@@ -733,7 +633,7 @@ input[type=text]:focus, input[type="password"]:focus {
   text-align: center;
 }
 
-.footer-text-center{
+.footer-text-center {
   color: #999;
   text-align: center;
   font-size: small;
@@ -743,6 +643,6 @@ input[type=text]:focus, input[type="password"]:focus {
 border-color: #ff0000;
 } */
 
-.foote_bottom_ul_amrc li a:hover{
-  color:#ff0000;
+.foote_bottom_ul_amrc li a:hover {
+  color: #ff0000;
 }

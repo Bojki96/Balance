@@ -50,8 +50,7 @@ document.addEventListener("scroll", () => {
     textNodes.push(weightLossText[i]);
   }
   if (
-    window.scrollY >
-    overviewNodes[0].offsetTop
+    window.scrollY > overviewNodes[0].offsetTop
     // + overviewNodes[0].offsetHeight
   ) {
     overviewNodes[0].classList.add("animate-height");
@@ -71,8 +70,7 @@ document.addEventListener("scroll", () => {
     );
   }
   if (
-    window.scrollY >
-    overviewNodes[1].offsetTop 
+    window.scrollY > overviewNodes[1].offsetTop
     //+ overviewNodes[1].offsetHeight
   ) {
     overviewNodes[1].classList.add("animate-height");
@@ -84,8 +82,7 @@ document.addEventListener("scroll", () => {
     });
   }
   if (
-    window.scrollY >
-    overviewNodes[2].offsetTop 
+    window.scrollY > overviewNodes[2].offsetTop
     //+ overviewNodes[2].offsetHeight
   ) {
     overviewNodes[2].classList.add("animate-height");
@@ -97,8 +94,7 @@ document.addEventListener("scroll", () => {
     });
   }
   if (
-    window.scrollY >
-    overviewNodes[3].offsetTop
+    window.scrollY > overviewNodes[3].offsetTop
     //+ overviewNodes[3].offsetHeight
   ) {
     overviewNodes[3].classList.add("animate-height");
@@ -111,9 +107,8 @@ document.addEventListener("scroll", () => {
 
     let fitApps = document.getElementsByClassName("fit-apps");
     let delayAnimation = 1500;
-    for(let i = 0; i < fitApps.length; i++){
-
-      fitApps[i].animate([{opacity: 1}], {
+    for (let i = 0; i < fitApps.length; i++) {
+      fitApps[i].animate([{ opacity: 1 }], {
         duration: 1500,
         delay: delayAnimation,
         iterations: 1,
@@ -121,9 +116,54 @@ document.addEventListener("scroll", () => {
       });
       delayAnimation += 500;
     }
-   
   }
 });
+
+document.getElementById("package").addEventListener("click", () => {
+  let packages = document.getElementById("packages").children;
+  document.getElementById("package").style.display = "none";
+  let delayAnimation = 300;
+  for (let i = 0; i < packages.length; i++) {
+    packages[i].style.display = "block";
+    packages[i].animate([{ opacity: 1 }], {
+      duration: 1500,
+      delay: delayAnimation,
+      iterations: 1,
+      fill: "forwards",
+    });
+    delayAnimation += 500;
+  }
+  document.getElementById("subscribe").style.display = "block";
+});
+
+let packages = document.getElementById("packages").children;
+for (let i = 0; i < packages.length; i++) {
+  packages[i].addEventListener("click", () => {
+    packages[i].style.background = "none";
+    packages[i].style.backgroundColor = "white";
+    chosenPackage(i);
+  });
+}
+
+function chosenPackage(chosenPackageNumber) {
+  for (let i = 0; i < packages.length; i++) {
+    if (i != chosenPackageNumber) {
+      packages[i].style.background =
+        "linear-gradient(to right, white 50%, red 50%)";
+      packages[i].style.backgroundSize = "200% 100%";
+      packages[i].style.backgroundPosition = "right";
+      packages[i].style.backgroundColor = "none";
+    }
+  }
+}
+
+// let choose = document.getElementsBy;
+// for(let i = 0; i < choose.length; i++){
+
+//   choose[i].addEventListener('click', ()=>{
+//     choose[i].style.fontSize = '25px';
+//   });
+// }
 
 let icons = document.getElementsByClassName("social_footer_ul")[0];
 let borderColor = ["red", "#4267B2", "#E1306C", "#2867B2", "yellow"];
@@ -139,10 +179,9 @@ for (let i = 0; i < 5; i++) {
 function goToFooter() {
   window.scrollTo(0, document.body.scrollHeight);
   let footerColor = document.getElementsByClassName("social_footer_ul")[0];
-  footerColor.animate([{border: "#ff0000 solid 2px"}], {
-      duration: 1000,
-      iterations:2,
-      fill: "backwards",
-      
-    })
+  footerColor.animate([{ border: "#ff0000 solid 2px" }], {
+    duration: 1000,
+    iterations: 2,
+    fill: "backwards",
+  });
 }
